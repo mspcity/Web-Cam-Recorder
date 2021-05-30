@@ -19,3 +19,11 @@ html,body {
   padding: 1rem;
   justify-content: space-around;
 }
+.video-item > h2 {
+    text-align: center;
+}
+.video-item > video {
+    border: 1px solid red;
+    width: 250px;
+    height: 188px;
+}
