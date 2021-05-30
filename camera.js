@@ -8,7 +8,8 @@ const recordingPlayer = document.querySelector("#recording")
 
 // functions
 function videoStart() {
-  console.log(navigator)
+  navigator.mediaDevices.getUserMedia({video:true, audio:true})
+  .then(stream => previewPlayer.srcObject = stream)
 }
 
 // event
