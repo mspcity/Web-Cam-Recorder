@@ -13,3 +13,9 @@ html,body {
   align-items: center;
   justify-content: center;
 }
+.video-container {
+  display: flex;
+  width: 550px;
+  padding: 1rem;
+  justify-content: space-around;
+}
