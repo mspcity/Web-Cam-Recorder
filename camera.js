@@ -14,7 +14,7 @@ function videoStart() {
   navigator.mediaDevices.getUserMedia({video:true, audio:true})
   .then(stream => {
       previewPlayer.srcObject = stream;
-      startRecording(previewPlayer.captureStream())
+      // startRecording(previewPlayer.captureStream())
       
   });
 }
@@ -24,6 +24,10 @@ function startRecording(stream) {
      recorder.ondataavailable = (e) => { recordedChunks.push(e.data)}
      recorder.start()
 }
+function stopRecording() {
+ console.log(previewPlayer.srcObject.getTracks()) 
+}
 
 // event
 recordButton.addEventListener("click", videoStart)
+stopButton.addEventListener("click", stopRecording)
