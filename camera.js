@@ -14,7 +14,7 @@ function videoStart() {
   navigator.mediaDevices.getUserMedia({video:true, audio:true})
   .then(stream => {
       previewPlayer.srcObject = stream;
-      // startRecording(previewPlayer.captureStream())
+      startRecording(previewPlayer.captureStream())
       
   });
 }
@@ -27,6 +27,8 @@ function startRecording(stream) {
 function stopRecording() {
       previewPlayer.srcObject.getTracks().forEach(track => track.stop());
       recorder.stop()
+      console.log(recordedChunks)
+
 
 }
 
