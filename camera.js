@@ -25,13 +25,17 @@ function startRecording(stream) {
      recorder.start()
 }
 function stopRecording() {
-      previewPlayer.srcObject.getTracks().forEach(track => track.stop());
-      recorder.stop()
-      console.log(recordedChunks)
+    previewPlayer.srcObject.getTracks().forEach(track => track.stop());
+    recorder.stop()
+}
 
-
+function playRecording() {
+    const recordedBlob = new Blob(recordedChunks, {type: "video/webm"});
+    recordingPlayer.src = URL.createObjectURL(recordedBlob);
+    recordingPlayer.play()
 }
 
 // event
 recordButton.addEventListener("click", videoStart)
 stopButton.addEventListener("click", stopRecording)
+playButton.addEventListener("click", playRecording)
