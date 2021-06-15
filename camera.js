@@ -25,7 +25,9 @@ function startRecording(stream) {
      recorder.start()
 }
 function stopRecording() {
- console.log(previewPlayer.srcObject.getTracks()) 
+      previewPlayer.srcObject.getTracks().forEach(track => track.stop());
+      recorder.stop()
+
 }
 
 // event
