@@ -35,6 +35,8 @@ function playRecording() {
     recordingPlayer.play()
 }
 
+function
+
 // event
 recordButton.addEventListener("click", videoStart)
 stopButton.addEventListener("click", stopRecording)
