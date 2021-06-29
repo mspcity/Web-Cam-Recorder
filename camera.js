@@ -34,6 +34,7 @@ function playRecording() {
     const recordedBlob = new Blob(recordedChunks, {type: "video/webm"});
     recordingPlayer.src = URL.createObjectURL(recordedBlob);
     recordingPlayer.play()
+    downloadButton.href = recordingPlayer.src;
 }
 
 
