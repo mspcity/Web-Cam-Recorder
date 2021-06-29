@@ -35,6 +35,7 @@ function playRecording() {
     recordingPlayer.src = URL.createObjectURL(recordedBlob);
     recordingPlayer.play()
     downloadButton.href = recordingPlayer.src;
+    downloadButton.download = `recording_${new Date()}.webm`
 }
 
 
