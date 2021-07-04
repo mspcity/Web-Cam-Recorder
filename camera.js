@@ -20,7 +20,7 @@ function videoStart() {
 }
 
 function startRecording(stream) {
-    //  recordedChunks = [];
+     recordedChunks = [];
      recorder = new MediaRecorder(stream);
      recorder.ondataavailable = (e) => { recordedChunks.push(e.data)}
      recorder.start()
