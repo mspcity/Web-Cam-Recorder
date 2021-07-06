@@ -10,7 +10,7 @@ let recorder;
 let recordedChunks = [];
 
 // functions
-function videoStart() {
+function videoStart(stream) {
   navigator.mediaDevices.getUserMedia({video:true, audio:true})
   .then(stream => {
       previewPlayer.srcObject = stream;
